@@ -28,6 +28,9 @@ public class RoomManagement {
         roomConditionChanged.setRoomNumber(this.getRoomNumber());
         roomConditionChanged.setRoomStatus(this.getRoomStatus());
         BeanUtils.copyProperties(this, roomConditionChanged);
+        
+        
+        
         roomConditionChanged.publishAfterCommit();
     }
     @PostUpdate
@@ -40,6 +43,8 @@ public class RoomManagement {
             roomConditionChanged.setRoomStatus(this.getRoomStatus());
             BeanUtils.copyProperties(this, roomConditionChanged);
             roomConditionChanged.publishAfterCommit();
+        
+            Thread.sleep(30000); // liveness test
 //            System.out.println("예약가능으로 변경");
 //        }
 
