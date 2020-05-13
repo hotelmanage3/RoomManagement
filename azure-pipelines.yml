@@ -106,7 +106,7 @@ stages:
                             - containerPort: 8080
                           readinessProbe:
                             httpGet:
-                              path: /roomManagements roomStatus="first"
+                              path: /roomManagements roomStatus="sec"
                               port: 8080
                             initialDelaySeconds: 10
                             timeoutSeconds: 2
