@@ -23,14 +23,14 @@ public class RoomManagement {
 
 
     @PostPersist
-    public void onPostPersist(){
+    public void onPostPersist() throws InterruptedException {
         RoomConditionChanged roomConditionChanged = new RoomConditionChanged();
         roomConditionChanged.setRoomNumber(this.getRoomNumber());
         roomConditionChanged.setRoomStatus(this.getRoomStatus());
         BeanUtils.copyProperties(this, roomConditionChanged);
-        
-        
-        
+
+        Thread.sleep(30000);
+
         roomConditionChanged.publishAfterCommit();
     }
     @PostUpdate
@@ -44,7 +44,6 @@ public class RoomManagement {
             BeanUtils.copyProperties(this, roomConditionChanged);
             roomConditionChanged.publishAfterCommit();
         
-            Thread.sleep(30000); // liveness test
 //            System.out.println("예약가능으로 변경");
 //        }
 
