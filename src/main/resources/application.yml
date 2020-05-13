@@ -30,7 +30,7 @@ spring:
           brokers: my-kafka.kafka.svc.cluster.local:9092
       bindings:
         input:
-          group: RoomManagement
+          group: roommanagement
           destination: eventTopic
           contentType: application/json
         output:
