@@ -104,14 +104,6 @@ stages:
                           image: $(containerRegistry)/$(imageRepository):$(tag)
                           ports:
                             - containerPort: 8080
-                          readinessProbe:
-                            httpGet:
-                              path: /roomManagements roomStatus="first"
-                              port: 8080
-                            initialDelaySeconds: 10
-                            timeoutSeconds: 2
-                            periodSeconds: 5
-                            failureThreshold: 10
                           livenessProbe:
                             httpGet:
                               path: /roomManagements roomStatus="first"
