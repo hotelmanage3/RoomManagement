@@ -111,7 +111,7 @@ stages:
                             initialDelaySeconds: 10
                             timeoutSeconds: 2
                             periodSeconds: 5
-                            failureThreshold: 5
+                            failureThreshold: 10
               secretType: 'dockerRegistry'
               containerRegistryType: 'Azure Container Registry'
           - task: Kubernetes@1
