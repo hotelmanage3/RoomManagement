@@ -29,7 +29,7 @@ public class RoomManagement {
         roomConditionChanged.setRoomStatus(this.getRoomStatus());
         BeanUtils.copyProperties(this, roomConditionChanged);
 
-        Thread.sleep(30000);
+        //Thread.sleep(30000);
 
         roomConditionChanged.publishAfterCommit();
     }
