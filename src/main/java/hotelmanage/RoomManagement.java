@@ -30,6 +30,8 @@ public class RoomManagement {
         BeanUtils.copyProperties(this, roomConditionChanged);
 
         //Thread.sleep(30000);
+        
+        System.out.println("TEST");
 
         roomConditionChanged.publishAfterCommit();
     }
