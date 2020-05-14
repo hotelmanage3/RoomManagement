@@ -31,7 +31,7 @@ public class RoomManagement {
 
         //Thread.sleep(30000);
         
-        System.out.println("TEST");
+        System.out.println("TEST22");
 
         roomConditionChanged.publishAfterCommit();
     }
